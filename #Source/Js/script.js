@@ -180,3 +180,49 @@ let scrollPos = 0;
 		animOnScroll();
 	}, 300);
 //}
+
+
+// ====== Адаптивная максимальная высота ====== 
+
+const adaptItems = document.querySelectorAll('.amh');
+let newAdaptItems = [];
+
+// Удаляю дубликаты
+adaptItems.forEach(adaptItem => {
+	if(!newAdaptItems.includes(adaptItem.classList[0])){
+		newAdaptItems.push(adaptItem.classList[0]);
+	}
+});
+
+function amh(newAdaptItems){
+	let maxHeight = 0;
+	newAdaptItems.forEach(newAdaptItem => {
+		let items = document.querySelectorAll('.' + newAdaptItem);
+
+		if( Number(items[0].classList[2]) < window.innerWidth){
+			items.forEach(item => {
+				item.style.minHeight = 'auto';
+				if (item.offsetHeight > maxHeight){
+					maxHeight = item.offsetHeight;
+				}
+			});
+
+			items.forEach(item => {
+				item.style.minHeight = maxHeight + 'px';
+			});
+		} else {
+			items.forEach(item => {
+				item.style.minHeight = 'auto';
+			});
+		}
+
+	});
+};
+amh(newAdaptItems);
+
+document.addEventListener("DOMContentLoaded", function(event)
+{
+    window.onresize = function() {
+        amh(newAdaptItems);
+    };
+});
