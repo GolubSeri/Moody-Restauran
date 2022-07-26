@@ -224,5 +224,21 @@ document.addEventListener("DOMContentLoaded", function(event)
 {
     window.onresize = function() {
         amh(newAdaptItems);
+       // adaptivElementsHeight();
     };
 });
+
+// Ширина желтных блоков по размеру текста 
+
+// Блок меню
+function adaptivElementsHeight(){
+	const root = document.querySelector(':root');
+
+	let menuHeight = document.querySelector('.our-menu__list').clientHeight;
+	let menuFooterHeight = document.querySelector('.our-menu__footer').clientHeight;
+
+	root.style.setProperty('--base-menu-height', menuHeight);
+	root.style.setProperty('--base-menu-footer-height', menuFooterHeight);
+}
+
+adaptivElementsHeight();
