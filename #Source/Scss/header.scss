@@ -82,6 +82,13 @@
 		letter-spacing: 0.05em;
 		color: #fff;
 		white-space: nowrap;
+
+		transition-duration: 0.3s;
+		&:hover{
+			color: #ffba00;
+			transition-property: color;
+			transition-duration: 0.3s;
+		}
 	}
 
 	li{

@@ -91,6 +91,15 @@ footer{
 		&:last-child{
 			margin-bottom: 0;
 		}
+
+		a{
+			transition-duration: 0.3s;
+			&:hover{
+				color: #ffba00;
+				transition-property: color;
+				transition-duration: 0.3s;
+			}
+		}
 	}
 
 	@media (max-width: $md3 + px){

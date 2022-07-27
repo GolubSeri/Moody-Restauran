@@ -245,11 +245,20 @@ body._lock {
   letter-spacing: 0.05em;
   color: #fff;
   white-space: nowrap;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 @media (max-width: 1210px) {
   .menu__list a {
     font-size: calc(28px + calc(33.4 - 28) * ((100vw - 767px) / 443));
   }
+}
+.menu__list a:hover {
+  color: #ffba00;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .menu__list li {
   margin-right: 65px;
@@ -1727,6 +1736,17 @@ body._lock {
 .about__list li:last-child {
   margin-right: 0;
 }
+.about__list li a {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.about__list li a:hover {
+  color: #ffba00;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
 
 .about__link {
   font-family: Raleway;
@@ -2220,6 +2240,20 @@ body._lock {
 }
 .gallery__image-column img {
   width: 100%;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.gallery__image-column img:hover {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 @media (max-width: 992.98px) {
   .gallery__image-column {
@@ -2391,6 +2425,20 @@ body._lock {
 }
 .gallery__social-links a:last-child {
   margin-right: 0;
+}
+.gallery__social-links a img {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.gallery__social-links a img:hover {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 @media (max-width: 767.98px) {
   .gallery__social-links {
@@ -2566,6 +2614,17 @@ footer {
 }
 .footer__list li:last-child {
   margin-bottom: 0;
+}
+.footer__list li a {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.footer__list li a:hover {
+  color: #ffba00;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 @media (max-width: 767.98px) {
   .footer__list {

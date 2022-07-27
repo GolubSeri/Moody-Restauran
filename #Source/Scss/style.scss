@@ -176,7 +176,6 @@ body._lock{
 		@include adaptiv-value('padding-bottom', 20, 15, 1440, 767);
 		@include adaptiv-value('padding-left', 72, 15, 1440, 767);
 
-
 		border: 4px solid #ffffff;
 		background-color: #ffba00;
 
@@ -769,6 +768,15 @@ body._lock{
 		}
 
 		text-align: center;
+
+		a{
+			transition-duration: 0.3s;
+			&:hover{
+				color: #ffba00;
+				transition-property: color;
+				transition-duration: 0.3s;
+			}
+		}
 	}
 }
 .about__link {
@@ -994,6 +1002,14 @@ body._lock{
 
 	img{
 		width: 100%;
+
+		transition-duration: 0.3s;
+		&:hover{
+			transition-property: transform;
+			transform: scale(1.1);
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+			transition-duration: 0.3s;
+		}
 	}
 
 	@media (max-width: $md2 + px){
@@ -1080,6 +1096,14 @@ body._lock{
 
 		&:last-child{
 			margin-right: 0;
+		}
+		img{
+			transition-duration: 0.3s;
+			&:hover{
+				transition-property: transform;
+				transform: scale(1.15);
+				transition-duration: 0.3s;
+			}
 		}
 	}
 
