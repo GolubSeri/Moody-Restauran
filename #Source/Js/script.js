@@ -224,13 +224,11 @@ document.addEventListener("DOMContentLoaded", function(event)
 {
     window.onresize = function() {
         amh(newAdaptItems);
-       // adaptivElementsHeight();
+        adaptivElementsHeight();
     };
 });
 
-// Ширина желтных блоков по размеру текста 
-
-// Блок меню
+// Ширина блоков по размеру текста
 function adaptivElementsHeight(){
 	const root = document.querySelector(':root');
 

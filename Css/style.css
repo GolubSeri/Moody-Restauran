@@ -1339,7 +1339,7 @@ body._lock {
   left: -40px;
   z-index: -1;
   width: 1035px;
-  height: calc(var(--calc-menu-height) * 1px);
+  height: calc((var(--base-menu-height) - 15) * 1px);
   background-color: #ffba00;
 }
 @media (max-width: 1480px) {
@@ -1357,9 +1357,19 @@ body._lock {
     width: calc(600px + calc(1035 - 600) * ((100vw - 767px) / 713));
   }
 }
-@media (max-width: 1480px) {
+@media (max-width: 1210px) {
   .our-menu__list::before {
-    height: calc(calc(var(--min-menu-height) * 1px) + calc(var(--calc-menu-height) - var(--min-menu-height)) * ((100vw - 767px) / 713));
+    height: calc((var(--base-menu-height) - 30) * 1px);
+  }
+}
+@media (max-width: 992.98px) {
+  .our-menu__list::before {
+    height: calc((var(--base-menu-height) - 40) * 1px);
+  }
+}
+@media (max-width: 479.98px) {
+  .our-menu__list::before {
+    height: calc((var(--base-menu-height) - 47) * 1px);
   }
 }
 @media (max-width: 767.98px) {
@@ -1390,13 +1400,6 @@ body._lock {
     left: -50px;
     width: 500px;
   }
-}
-
-:root {
-  --calc-menu-height: calc(var(--base-menu-height) - 15);
-  --min-menu-height: calc(var(--calc-menu-height) * 64.6 / 100);
-  --menu-footer-height: calc(var(--base-menu-footer-height) + 37);
-  --min-menu-footer-height: calc(var(--base-menu-footer-height) + 12);
 }
 
 .our-menu__item {
@@ -1539,7 +1542,7 @@ body._lock {
   top: -19px;
   left: -188px;
   width: 936px;
-  height: calc(var(--menu-footer-height) * 1px);
+  height: calc((var(--base-menu-footer-height) + 35) * 1px);
   border: 2px solid #ffffff;
 }
 @media (max-width: 1480px) {
@@ -1557,9 +1560,29 @@ body._lock {
     width: calc(550px + calc(936 - 550) * ((100vw - 767px) / 713));
   }
 }
-@media (max-width: 1480px) {
+@media (max-width: 1210px) {
   .our-menu__footer::before {
-    height: calc(calc(var(--min-menu-footer-height) * 1px) + calc(var(--menu-footer-height) - var(--min-menu-footer-height)) * ((100vw - 767px) / 713));
+    height: calc((var(--base-menu-footer-height) + 30) * 1px);
+  }
+}
+@media (max-width: 992.98px) {
+  .our-menu__footer::before {
+    height: calc((var(--base-menu-footer-height) + 25) * 1px);
+  }
+}
+@media (max-width: 767.98px) {
+  .our-menu__footer::before {
+    height: calc((var(--base-menu-footer-height) + 20) * 1px);
+  }
+}
+@media (max-width: 600px) {
+  .our-menu__footer::before {
+    height: calc((var(--base-menu-footer-height) + 17) * 1px);
+  }
+}
+@media (max-width: 479.98px) {
+  .our-menu__footer::before {
+    height: calc((var(--base-menu-footer-height) + 13) * 1px);
   }
 }
 @media (max-width: 767.98px) {

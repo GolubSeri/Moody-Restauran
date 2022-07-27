@@ -88,6 +88,7 @@ body._lock{
 // 2) Размер;
 // 3) Внешний вид.
 
+
 // Основной блок
 // ================================== 
 
@@ -571,14 +572,26 @@ body._lock{
 		z-index: -1;
 		
 		@include adaptiv-value('width', 1035, 600, 1480, 767);
-		//height: calc(var(--calc-menu-height) * 1px);
-		@include adaptiv-value('height', var(--calc-menu-height), var(--min-menu-height), 1480, 767);
+		
+		//@include adaptiv-value('height', var(--menu-height), var(--md-menu-height), 1480, $md1);
+		//@include adaptiv-value('height', calc(var(--base-menu-height) - 15), calc(var(--base-menu-height) - 75), 1480, $md1);
 
+		height: calc((var(--base-menu-height) - 15) * 1px);
+
+		@media (max-width: $md1 + px){
+			height: calc((var(--base-menu-height) - 30) * 1px);
+		};
+		@media (max-width: $md2 + px){
+			height: calc((var(--base-menu-height) - 40) * 1px);
+		};
+		@media (max-width: $md4 + px){
+			height: calc((var(--base-menu-height) - 47) * 1px);
+		};
+		
 		@media (max-width: $md3 + px){
 			@include adaptiv-value('top', -30, -20, 767, 479.98);
 			@include adaptiv-value('left', -30, -20, 767, 479.98);
 			@include adaptiv-value('width', 600, 450, 767, 479.98);
-			//@include adaptiv-value('height', var(--min-menu-height), 220, 767, 320);
 		};
 
 		@media (max-width: $md4 + px){
@@ -588,16 +601,6 @@ body._lock{
 		};
 		background-color: #ffba00;
 	}
-}
-
-:root{
-	--calc-menu-height: calc(var(--base-menu-height) - 15);
-	--min-menu-height: calc(var(--calc-menu-height) * 64.6 / 100);
-	//--super-min-menu-height: calc()
-
-
-	--menu-footer-height: calc(var(--base-menu-footer-height) + 37);
-	--min-menu-footer-height: calc(var(--base-menu-footer-height) + 12);
 }
 
 .our-menu__item{
@@ -674,7 +677,24 @@ body._lock{
 		@include adaptiv-value('left', -188, -30, 1480, 767);
 
 		@include adaptiv-value('width', 936, 550, 1480, 767);
-		@include adaptiv-value('height', var(--menu-footer-height), var(--min-menu-footer-height), 1480, 767);
+		
+		height: calc((var(--base-menu-footer-height) + 35) * 1px);
+
+		@media (max-width: $md1 + px){
+			height: calc((var(--base-menu-footer-height) + 30) * 1px);
+		};
+		@media (max-width: $md2 + px){
+			height: calc((var(--base-menu-footer-height) + 25) * 1px);
+		};
+		@media (max-width: $md3 + px){
+			height: calc((var(--base-menu-footer-height) + 20) * 1px);
+		};
+		@media (max-width: 600px){
+			height: calc((var(--base-menu-footer-height) + 17) * 1px);
+		};
+		@media (max-width: $md4 + px){
+			height: calc((var(--base-menu-footer-height) + 13) * 1px);
+		};
 
 		border: 2px solid #ffffff;
 
